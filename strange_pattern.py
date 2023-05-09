@@ -6,13 +6,13 @@ def strange_pattern(shape):
     pattern = np.full(shape= shape, fill_value= False)
    
     for i in range(0,shape[0]):
-        for k in range(i%3,shape[1],3):
+        for k in range(((3 - (i%3))%3),shape[1],3):
             pattern[i,k ] = True
 
-  return pattern
+    return pattern
 
 
 if __name__ == "__main__":
-    # use this for your own testing!
+    print( strange_pattern((8,6)))
 
     pass
